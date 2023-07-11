@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<style name="Theme.MyExpenses.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#7F3DFF</item>
+        <item name="android:windowSplashScreenAnimationDuration">3000</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_home_black_24dp</item>
+        <item name="postSplashScreenTheme">@style/Theme.MyExpenses</item>
+    </style>-->
+</resources>
