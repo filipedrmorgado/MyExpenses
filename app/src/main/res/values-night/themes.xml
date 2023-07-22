@@ -13,8 +13,11 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
         <!-- Customize your theme here. -->
-
-        <!-- Splash Screen customization -->
-        <!-- Set the splash screen icon -->
     </style>
+
+    <!-- Custom Theme for the splash screen -->
+    <style name="Theme.MyExpenses.SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize other theme attributes if needed -->
+    </style>
+
 </resources>
