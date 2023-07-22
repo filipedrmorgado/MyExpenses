@@ -1,0 +1,16 @@
+<!-- res/layout/activity_splash.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splashscreen_v3"
+        android:background="@color/defaultPurple"
+        android:scaleType="centerInside"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>
