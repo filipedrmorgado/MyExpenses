@@ -6,21 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.filipemorgado.myexpenses.databinding.FragmentNotificationsBinding
+import com.filipemorgado.myexpenses.databinding.FragmentProfileBinding
 
-class NotificationsFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private lateinit var binding: FragmentNotificationsBinding
-    private val notificationsViewModel: NotificationsViewModel by activityViewModels()
+    private lateinit var binding: FragmentProfileBinding
+    private val profileViewModel: ProfileViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false)
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            binding.textNotifications.text = it
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
+        profileViewModel.text.observe(viewLifecycleOwner) {
+            binding.textProfile.text = it
         }
         return binding.root
     }

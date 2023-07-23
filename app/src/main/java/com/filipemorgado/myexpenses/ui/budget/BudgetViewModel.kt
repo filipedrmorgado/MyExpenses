@@ -1,13 +1,13 @@
-package com.filipemorgado.myexpenses.ui.notifications
+package com.filipemorgado.myexpenses.ui.budget
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class BudgetViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is budget Fragment"
     }
     val text: LiveData<String> = _text
 }

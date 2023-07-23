@@ -9,12 +9,14 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.filipemorgado.myexpenses.R
 import com.filipemorgado.myexpenses.databinding.ActivityMainBinding
-import com.filipemorgado.myexpenses.ui.dashboard.DashboardViewModel
-import com.filipemorgado.myexpenses.ui.dashboard.DashboardViewModelFactory
+import com.filipemorgado.myexpenses.ui.budget.BudgetViewModel
+import com.filipemorgado.myexpenses.ui.budget.BudgetViewModelFactory
+import com.filipemorgado.myexpenses.ui.transaction.TransactionViewModel
+import com.filipemorgado.myexpenses.ui.transaction.TransactionViewModelFactory
 import com.filipemorgado.myexpenses.ui.home.HomeViewModel
 import com.filipemorgado.myexpenses.ui.home.HomeViewModelFactory
-import com.filipemorgado.myexpenses.ui.notifications.NotificationsViewModel
-import com.filipemorgado.myexpenses.ui.notifications.NotificationsViewModelFactory
+import com.filipemorgado.myexpenses.ui.notifications.ProfileViewModel
+import com.filipemorgado.myexpenses.ui.notifications.ProfileViewModelFactory
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -26,13 +28,15 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     private lateinit var binding: ActivityMainBinding
 
     // ViewModel factories
-    private val dashboardFactory: DashboardViewModelFactory by instance()
-    private val notificationsFactory: NotificationsViewModelFactory by instance()
+    private val dashboardFactory: TransactionViewModelFactory by instance()
+    private val budgetFactory: BudgetViewModelFactory by instance()
+    private val profileFactory: ProfileViewModelFactory by instance()
     private val homeFactory: HomeViewModelFactory by instance()
 
     // ViewModel initialization
-    private lateinit var dashboardViewModel: DashboardViewModel
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var transactionViewModel: TransactionViewModel
+    private lateinit var profileViewModel: ProfileViewModel
+    private lateinit var budgetViewModel: BudgetViewModel
     private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,8 +52,9 @@ class MainActivity : AppCompatActivity(), KodeinAware {
      * Initialization of viewmodel factories
      */
     private fun initViewModelFactories() {
-        dashboardViewModel = ViewModelProvider(this, dashboardFactory)[DashboardViewModel::class.java]
-        notificationsViewModel = ViewModelProvider(this, notificationsFactory)[NotificationsViewModel::class.java]
+        transactionViewModel = ViewModelProvider(this, dashboardFactory)[TransactionViewModel::class.java]
+        profileViewModel = ViewModelProvider(this, profileFactory)[ProfileViewModel::class.java]
+        budgetViewModel = ViewModelProvider(this, budgetFactory)[BudgetViewModel::class.java]
         homeViewModel = ViewModelProvider(this, homeFactory)[HomeViewModel::class.java]
     }
 
@@ -63,7 +68,10 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home,
+                R.id.navigation_transaction,
+                R.id.navigation_budget,
+                R.id.navigation_profile
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

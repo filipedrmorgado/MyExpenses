@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 @Suppress("UNCHECKED_CAST")
-class NotificationsViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
+class ProfileViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return NotificationsViewModel() as T
+        return ProfileViewModel() as T
     }
 }

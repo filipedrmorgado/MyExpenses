@@ -1,12 +1,12 @@
-package com.filipemorgado.myexpenses.ui.dashboard
+package com.filipemorgado.myexpenses.ui.budget
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 @Suppress("UNCHECKED_CAST")
-class DashboardViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
+class BudgetViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return DashboardViewModel() as T
+        return BudgetViewModel() as T
     }
 }

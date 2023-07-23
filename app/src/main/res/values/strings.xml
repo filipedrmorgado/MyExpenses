@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">MyExpenses</string>
+    <string name="app_name">Keep Count</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_budget">Budget</string>
+    <string name="title_transaction">Transaction</string>
+    <string name="title_profile">Profile</string>
 </resources>
