@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses
+package com.filipemorgado.myexpenses.ui.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent

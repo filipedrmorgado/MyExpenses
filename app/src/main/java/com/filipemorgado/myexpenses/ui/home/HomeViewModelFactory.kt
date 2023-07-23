@@ -7,6 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 class HomeViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return HomeViewModelFactory() as T
+        return HomeViewModel() as T
     }
 }

@@ -7,6 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 class DashboardViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return DashboardViewModelFactory() as T
+        return DashboardViewModel() as T
     }
 }

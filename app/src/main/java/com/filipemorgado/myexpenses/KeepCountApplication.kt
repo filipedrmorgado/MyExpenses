@@ -1,6 +1,8 @@
 package com.filipemorgado.myexpenses
 
 import android.app.Application
+import com.filipemorgado.myexpenses.ui.dashboard.DashboardViewModelFactory
+import com.filipemorgado.myexpenses.ui.home.HomeViewModelFactory
 import com.filipemorgado.myexpenses.ui.notifications.NotificationsViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -21,6 +23,8 @@ class KeepCountApplication: Application(), KodeinAware {
         // bind() from singleton { Repository(instance(),instance()) }
 
         // ViewModelFactories
+        bind() from provider { DashboardViewModelFactory() }
         bind() from provider { NotificationsViewModelFactory() }
+        bind() from provider { HomeViewModelFactory() }
     }
 }

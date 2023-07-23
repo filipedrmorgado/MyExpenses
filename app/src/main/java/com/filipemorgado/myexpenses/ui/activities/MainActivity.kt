@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses
+package com.filipemorgado.myexpenses.ui.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.filipemorgado.myexpenses.R
 import com.filipemorgado.myexpenses.databinding.ActivityMainBinding
 import com.filipemorgado.myexpenses.ui.dashboard.DashboardViewModel
 import com.filipemorgado.myexpenses.ui.dashboard.DashboardViewModelFactory
@@ -24,15 +25,15 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     override val kodein by kodein()
     private lateinit var binding: ActivityMainBinding
 
-    // ViewModel initialization
-    private lateinit var dashboardViewModel: DashboardViewModel
-    private lateinit var notificationsViewModel: NotificationsViewModel
-    private lateinit var homeViewModel: HomeViewModel
-
     // ViewModel factories
     private val dashboardFactory: DashboardViewModelFactory by instance()
     private val notificationsFactory: NotificationsViewModelFactory by instance()
     private val homeFactory: HomeViewModelFactory by instance()
+
+    // ViewModel initialization
+    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -7,6 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 class NotificationsViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return NotificationsViewModelFactory() as T
+        return NotificationsViewModel() as T
     }
 }
