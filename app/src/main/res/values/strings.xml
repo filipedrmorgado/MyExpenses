@@ -4,4 +4,6 @@
     <string name="title_budget">Budget</string>
     <string name="title_transaction">Transaction</string>
     <string name="title_profile">Profile</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="see_all">See All</string>
 </resources>
