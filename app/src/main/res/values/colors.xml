@@ -10,5 +10,6 @@
 
 
     <color name="defaultPurple">#7F3DFF</color>
+    <color name="defaultGrey">#C6C6C6</color>
 
 </resources>
