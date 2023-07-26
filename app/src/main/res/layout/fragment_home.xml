@@ -11,21 +11,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/clRecentTransactions">
 
         <TextView
-            android:id="@+id/textWalletToolbar"
+            android:id="@+id/tvRecentTransactionsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="15dp"
-            android:fontFamily="@font/inter_regular"
+            android:fontFamily="@font/inter_semibold"
             android:text="@string/recent_transactions"
-            android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textColor="@color/softerBlack"
+            android:textSize="18sp"
             tools:ignore="RelativeOverlap" />
 
         <TextView
@@ -34,10 +35,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15sp"
-            android:fontFamily="@font/inter_regular"
+            android:layout_marginEnd="14sp"
+            android:fontFamily="@font/inter_medium"
             android:text="@string/see_all"
             android:textColor="@color/defaultPurple"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/radius_background_color"
             tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 

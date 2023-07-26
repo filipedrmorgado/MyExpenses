@@ -10,6 +10,7 @@
 
     <!-- Custom Colors -->
     <color name="defaultPurple">#7F3DFF</color>
+    <color name="lightPurple">#EEE5FF</color>
     <color name="defaultGrey">#C6C6C6</color>
     <color name="lightGrey">#91919F</color>
     <color name="black">#FF000000</color>
