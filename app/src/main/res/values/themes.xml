@@ -22,4 +22,12 @@
         <!-- Customize other theme attributes if needed -->
     </style>
 
+
+    <style name="ButtonSelectionStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
 </resources>

@@ -19,9 +19,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            binding.textHome.text = it
-        }
         return binding.root
     }
 
