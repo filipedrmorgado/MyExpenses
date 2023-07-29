@@ -20,6 +20,7 @@
             layout="@layout/transactions_time_selector" />
     </LinearLayout>
 
+    <!-- //todo See All needs to be more similar -->
     <RelativeLayout
         android:id="@+id/recentTransactionsBar"
         android:layout_width="match_parent"

@@ -22,18 +22,4 @@
         <!-- Customize other theme attributes if needed -->
     </style>
 
-    <!-- Style for the selected state of timeline buttons -->
-    <style name="SelectedTextStyle">
-        <item name="android:fontFamily">@font/inter_bold</item>
-        <item name="android:textColor">@color/orange</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <!-- Style for the default state of timeline buttons -->
-    <style name="DefaultTextStyle">
-        <item name="android:fontFamily">@font/inter_regular</item>
-        <item name="android:textColor">@color/lightGrey</item>
-        <item name="android:textSize">16sp</item>
-    </style>
-
 </resources>

@@ -10,4 +10,8 @@
     <string name="transaction_time_example">03:30 PM</string>
     <string name="transaction_category">Category</string>
     <string name="transaction_description">Description</string>
+    <string name="timeline_today">Today</string>
+    <string name="timeline_week">Week</string>
+    <string name="timeline_month">Month</string>
+    <string name="timeline_year">Year</string>
 </resources>

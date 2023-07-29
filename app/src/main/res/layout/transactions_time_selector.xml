@@ -10,54 +10,49 @@
         <RadioButton
             android:id="@+id/radioDay"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="Day"
+            android:text="@string/timeline_today"
             android:textAlignment="center"
             android:checked="true"
-            android:textColor="@drawable/timeline_textcolor_selector"
+            android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
-            android:fontFamily="@drawable/timeline_fontstyle_selector"
             android:button="@null"
             android:layout_margin="4dp" />
 
         <RadioButton
             android:id="@+id/radioWeek"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="Week"
+            android:text="@string/timeline_week"
             android:textAlignment="center"
-            android:textColor="@drawable/timeline_textcolor_selector"
+            android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
-            android:fontFamily="@drawable/timeline_fontstyle_selector"
             android:button="@null"
             android:layout_margin="4dp" />
 
         <RadioButton
             android:id="@+id/radioMonth"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="Month"
+            android:text="@string/timeline_month"
             android:textAlignment="center"
-            android:textColor="@drawable/timeline_textcolor_selector"
+            android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
-            android:fontFamily="@drawable/timeline_fontstyle_selector"
-
             android:button="@null"
             android:layout_margin="4dp" />
 
         <RadioButton
             android:id="@+id/radioYear"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="Year"
+            android:text="@string/timeline_year"
             android:textAlignment="center"
-            android:textColor="@drawable/timeline_textcolor_selector"
+            android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
-            android:fontFamily="@drawable/timeline_fontstyle_selector"
             android:button="@null"
             android:layout_margin="4dp" />
 
