@@ -17,5 +17,6 @@
     <color name="softerBlack">#292B2D</color>
     <color name="negativeBalance">#FD3C4A</color>
     <color name="orange">#FCAC12</color>
+    <color name="lightOrange">#FCEED4</color>
 
 </resources>

@@ -1,39 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<!-- Define a RadioGroup to contain the RadioButtons -->
+<RadioGroup
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radioGroup"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/todaySelector"
-            android:layout_width="wrap_content"
+        <!-- Define a RadioButton for each option -->
+        <RadioButton
+            android:id="@+id/radioDay"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ButtonSelectionStyle"
-            android:padding="0dp"
-            android:text="Today"
-            android:background="@drawable/selector_shape" />
+            android:layout_weight="1"
+            android:text="Day"
+            android:textAlignment="center"
+            android:checked="true"
+            android:textColor="@drawable/timeline_textcolor_selector"
+            android:background="@drawable/timeline_bg_selector"
+            android:fontFamily="@drawable/timeline_fontstyle_selector"
+            android:button="@null"
+            android:layout_margin="4dp" />
 
-        <Button
-            android:id="@+id/tomorrowSelector"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/radioWeek"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ButtonSelectionStyle"
-            android:layout_margin="5dp"
-            android:padding="0dp"
+            android:layout_weight="1"
             android:text="Week"
-            android:textStyle="bold"
-            android:background="@drawable/selector_shape" />
+            android:textAlignment="center"
+            android:textColor="@drawable/timeline_textcolor_selector"
+            android:background="@drawable/timeline_bg_selector"
+            android:fontFamily="@drawable/timeline_fontstyle_selector"
+            android:button="@null"
+            android:layout_margin="4dp" />
 
-        <Button
-            android:id="@+id/nextWeekSelector"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/radioMonth"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/ButtonSelectionStyle"
-            android:padding="0dp"
+            android:layout_weight="1"
             android:text="Month"
-            android:background="@drawable/selector_shape" />
+            android:textAlignment="center"
+            android:textColor="@drawable/timeline_textcolor_selector"
+            android:background="@drawable/timeline_bg_selector"
+            android:fontFamily="@drawable/timeline_fontstyle_selector"
 
-</LinearLayout>
+            android:button="@null"
+            android:layout_margin="4dp" />
+
+        <RadioButton
+            android:id="@+id/radioYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Year"
+            android:textAlignment="center"
+            android:textColor="@drawable/timeline_textcolor_selector"
+            android:background="@drawable/timeline_bg_selector"
+            android:fontFamily="@drawable/timeline_fontstyle_selector"
+            android:button="@null"
+            android:layout_margin="4dp" />
+
+</RadioGroup>

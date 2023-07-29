@@ -1,0 +1,15 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Use light orange background with radius when selected -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/lightOrange"/>
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+    <!-- Use transparent background when not selected -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Use transparent color value -->
+        </shape>
+    </item>
+</selector>
