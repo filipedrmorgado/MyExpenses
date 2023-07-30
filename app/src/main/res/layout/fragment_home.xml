@@ -7,6 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <!-- //todo here it will be the toolbar-->
+    <LinearLayout
+        android:id="@+id/toolbarHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accBalance"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/accBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llDaySelector"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAccBalance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/account_balance"
+            android:textColor="@color/lightGrey"
+            android:textSize="14sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/tvBalanceAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/balance_amount"
+            android:textColor="@color/mediumBlack"
+            android:textSize="40sp"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/llDaySelector"
         android:layout_width="match_parent"
@@ -53,10 +99,10 @@
             android:fontFamily="@font/inter_medium"
             android:text="@string/see_all"
             android:textColor="@color/defaultPurple"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:background="@drawable/radius_background_color"
             tools:ignore="RelativeOverlap" />
     </RelativeLayout>

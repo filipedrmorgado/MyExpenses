@@ -14,4 +14,6 @@
     <string name="timeline_week">Week</string>
     <string name="timeline_month">Month</string>
     <string name="timeline_year">Year</string>
+    <string name="balance_amount">$9400</string>
+    <string name="account_balance">Account Balance</string>
 </resources>
