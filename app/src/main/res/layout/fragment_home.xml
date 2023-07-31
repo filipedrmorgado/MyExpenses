@@ -14,42 +14,69 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/accBalance"
+        app:layout_constraintBottom_toTopOf="@id/tvAccBalance"
         android:layout_marginBottom="40dp"
         android:orientation="vertical">
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvAccBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/account_balance"
+        android:textColor="@color/lightGrey"
+        android:textSize="14sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvBalanceAmount" />
+
+    <TextView
+        android:id="@+id/tvBalanceAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/balance_amount"
+        android:textColor="@color/mediumBlack"
+        android:textSize="40sp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/accBalance" />
+
     <LinearLayout
         android:id="@+id/accBalance"
+        android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/llDaySelector"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tvAccBalance"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/account_balance"
-            android:textColor="@color/lightGrey"
-            android:textSize="14sp"
-            tools:ignore="RelativeOverlap" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/income_radius_background"
+            >
 
-        <TextView
-            android:id="@+id/tvBalanceAmount"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:fontFamily="@font/inter_semibold"
-            android:text="@string/balance_amount"
-            android:textColor="@color/mediumBlack"
-            android:textSize="40sp"
-            tools:ignore="RelativeOverlap" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/expense_radius_background"
+            >
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -17,6 +17,7 @@
     <color name="mediumBlack">#161719</color>
     <color name="softerBlack">#292B2D</color>
     <color name="negativeBalance">#FD3C4A</color>
+    <color name="positiveBalance">#00A86B</color>
     <color name="orange">#FCAC12</color>
     <color name="lightOrange">#FCEED4</color>
 
