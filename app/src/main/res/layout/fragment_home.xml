@@ -45,10 +45,10 @@
         android:layout_marginBottom="@dimen/amount_margij"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/accBalance" />
+        app:layout_constraintBottom_toTopOf="@id/llIncomeBox" />
 
     <LinearLayout
-        android:id="@+id/accBalance"
+        android:id="@+id/llIncomeBox"
         android:baselineAligned="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,25 +58,104 @@
         android:layout_marginBottom="@dimen/income_expense_margin"
         android:orientation="horizontal">
 
+        <!-- //todo set text max size for cash -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="@dimen/income_expense_height"
             android:layout_weight="1"
-            android:layout_margin="10dp"
+            android:layout_marginRight="@dimen/income_box_margins"
+            android:layout_marginLeft="@dimen/income_box_margins"
             android:background="@drawable/income_radius_background">
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/ic_income_transactions"
+                android:layout_width="@dimen/ic_income_expense_size"
+                android:layout_height="@dimen/ic_income_expense_size"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/income_expense_icon_margin_start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_income"
+                tools:ignore="ContentDescription" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/income_expense_margin_start"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/income"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="NestedWeights" />
+                <TextView
+                    android:id="@+id/tvIncomeBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/value_5000"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="@dimen/income_expense_height"
             android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:background="@drawable/expense_radius_background"
-            >
+            android:layout_marginRight="@dimen/income_box_margins"
+            android:layout_marginLeft="@dimen/income_box_margins"
+            android:background="@drawable/expense_radius_background">
 
+            <ImageView
+                android:id="@+id/ic_transaction"
+                android:layout_width="@dimen/ic_income_expense_size"
+                android:layout_height="@dimen/ic_income_expense_size"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/income_expense_icon_margin_start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_expense"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/income_expense_margin_start"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTransactionCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/expenses"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="NestedWeights" />
+                <TextView
+                    android:id="@+id/tvTransactionDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="@string/value_1200"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
