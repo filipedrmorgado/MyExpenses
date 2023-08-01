@@ -108,11 +108,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="@dimen/recent_transactions_margin"
             android:fontFamily="@font/inter_semibold"
             android:text="@string/recent_transactions"
             android:textColor="@color/softerBlack"
-            android:textSize="18sp"
+            android:textSize="@dimen/recent_transactions_text_size"
             tools:ignore="RelativeOverlap" />
 
         <TextView
@@ -121,14 +121,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="@dimen/recent_transactions_margin"
             android:fontFamily="@font/inter_medium"
             android:text="@string/see_all"
             android:textColor="@color/defaultPurple"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/recent_transactions_margin_end_start"
+            android:paddingRight="@dimen/recent_transactions_margin_end_start"
+            android:paddingTop="@dimen/recent_transactions_margin_top_bottom"
+            android:paddingBottom="@dimen/recent_transactions_margin_top_bottom"
             android:background="@drawable/radius_background_color"
             tools:ignore="RelativeOverlap" />
     </RelativeLayout>
@@ -136,7 +136,7 @@
     <Space
         android:id="@+id/space"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
+        android:layout_height="@dimen/space_height"
         app:layout_constraintTop_toBottomOf="@+id/recentTransactionsBar"
         app:layout_constraintBottom_toTopOf="@id/rvTransactions" />
 
@@ -148,7 +148,6 @@
         app:layout_constraintTop_toBottomOf="@+id/recentTransactionsBar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
