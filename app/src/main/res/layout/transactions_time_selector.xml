@@ -10,7 +10,7 @@
         <RadioButton
             android:id="@+id/radioDay"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/timeline_height_selector"
             android:layout_weight="1"
             android:text="@string/timeline_today"
             android:textAlignment="center"
@@ -18,42 +18,42 @@
             android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
             android:button="@null"
-            android:layout_margin="4dp" />
+            android:layout_margin="@dimen/timeline_margin" />
 
         <RadioButton
             android:id="@+id/radioWeek"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/timeline_height_selector"
             android:layout_weight="1"
             android:text="@string/timeline_week"
             android:textAlignment="center"
             android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
             android:button="@null"
-            android:layout_margin="4dp" />
+            android:layout_margin="@dimen/timeline_margin" />
 
         <RadioButton
             android:id="@+id/radioMonth"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/timeline_height_selector"
             android:layout_weight="1"
             android:text="@string/timeline_month"
             android:textAlignment="center"
             android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
             android:button="@null"
-            android:layout_margin="4dp" />
+            android:layout_margin="@dimen/timeline_margin" />
 
         <RadioButton
             android:id="@+id/radioYear"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="@dimen/timeline_height_selector"
             android:layout_weight="1"
             android:text="@string/timeline_year"
             android:textAlignment="center"
             android:textColor="@drawable/timeline_text_color_selector"
             android:background="@drawable/timeline_bg_selector"
             android:button="@null"
-            android:layout_margin="4dp" />
+            android:layout_margin="@dimen/timeline_margin" />
 
 </RadioGroup>

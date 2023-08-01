@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
-        android:textSize="12sp"
+        android:textSize="@dimen/bottom_nav_text_size"
         android:textColor="@color/defaultPurple"
         android:layout_gravity="center"
         android:gravity="center_vertical"/>

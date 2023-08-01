@@ -6,4 +6,16 @@
     <dimen name="transaction_list_content_height">60dp</dimen>
     <dimen name="transaction_list_main_text">16sp</dimen>
     <dimen name="transaction_list_secondary_text">13sp</dimen>
+    <dimen name="bottom_nav_text_size">12sp</dimen>
+    <dimen name="recycler_view_margin_end">25dp</dimen>
+    <dimen name="timeline_height_selector">35dp</dimen>
+    <dimen name="timeline_margin">4dp</dimen>
+    <dimen name="balance_header_text_size">14sp</dimen>
+    <dimen name="amount_text_size">40sp</dimen>
+    <dimen name="balance_margin">5dp</dimen>
+    <dimen name="amount_margij">15dp</dimen>
+    <dimen name="income_expense_margin">15dp</dimen>
+    <dimen name="income_expense_height">80dp</dimen>
+    <dimen name="day_selector_margin">10dp</dimen>
+    <dimen name="recent_transaction_padding">8dp</dimen>
 </resources>
