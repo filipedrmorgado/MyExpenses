@@ -20,4 +20,18 @@
     <string name="value_5000">$5000</string>
     <string name="expenses">Expenses</string>
     <string name="value_1200">$1200</string>
+    <string-array name="dropdown_items">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
 </resources>

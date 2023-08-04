@@ -4,21 +4,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/home_screen_top_screen_radius"
-    >
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_screen_top_screen_radius">
 
     <!-- //todo here it will be the toolbar-->
-    <LinearLayout
-        android:id="@+id/toolbarHere"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/top_toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tvAccBalance"
-        android:layout_marginBottom="40dp"
-        android:orientation="vertical">
-    </LinearLayout>
+        app:layout_constraintBottom_toTopOf="@id/tvAccBalance" />
+
+    <Space
+        android:id="@+id/toolbarSpacer"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvAccBalance" />
 
     <TextView
         android:id="@+id/tvAccBalance"
