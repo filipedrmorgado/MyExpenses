@@ -13,8 +13,8 @@
     <dimen name="balance_header_text_size">14sp</dimen>
     <dimen name="amount_text_size">40sp</dimen>
     <dimen name="balance_margin">5dp</dimen>
-    <dimen name="amount_margij">15dp</dimen>
-    <dimen name="income_expense_margin">15dp</dimen>
+    <dimen name="amount_margin">25dp</dimen>
+    <dimen name="income_expense_margin">25dp</dimen>
     <dimen name="income_expense_height">80dp</dimen>
     <dimen name="day_selector_margin">10dp</dimen>
     <dimen name="recent_transaction_padding">8dp</dimen>
@@ -22,7 +22,7 @@
     <dimen name="recent_transactions_text_size">18sp</dimen>
     <dimen name="space_height">5dp</dimen>
     <dimen name="ic_income_expense_size">48dp</dimen>
-    <dimen name="income_box_margins">20dp</dimen>
+    <dimen name="income_box_margins">18dp</dimen>
     <dimen name="income_expense_icon_margin_start">16dp</dimen>
     <dimen name="income_expense_margin_start">10dp</dimen>
 </resources>

@@ -4,34 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <include
-        android:id="@+id/homeTop"
-        layout="@layout/home_screen_top"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guideline" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.50" />
-
-    <include
-        android:id="@+id/homeBottom"
-        layout="@layout/home_screen_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        app:layout_constraintBottom_toBottomOf="parent" />
+    android:layout_height="match_parent">
 
     <!-- //todo here it will be the toolbar-->
-    <!--<LinearLayout
+    <LinearLayout
         android:id="@+id/toolbarHere"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,10 +41,12 @@
         android:text="@string/balance_amount"
         android:textColor="@color/mediumBlack"
         android:textSize="@dimen/amount_text_size"
-        android:layout_marginBottom="@dimen/amount_margij"
+        android:layout_marginBottom="@dimen/amount_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/llIncomeBox" />
+
+    <!-- //todo improve layout to constraints only -performance- -->
 
     <LinearLayout
         android:id="@+id/llIncomeBox"
@@ -81,7 +59,7 @@
         android:layout_marginBottom="@dimen/income_expense_margin"
         android:orientation="horizontal">
 
-        &lt;!&ndash; //todo set text max size for cash &ndash;&gt;
+        <!-- //todo set text max size for cash -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="@dimen/income_expense_height"
@@ -187,71 +165,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/recentTransactionsBar"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="@dimen/day_selector_margin">
         <include
             android:id="@+id/daySelector"
             layout="@layout/transactions_time_selector" />
     </LinearLayout>
 
-    &lt;!&ndash; //todo See All needs to be more similar &ndash;&gt;
-    <RelativeLayout
-        android:id="@+id/recentTransactionsBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/recent_transaction_padding"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/rvTransactions">
-
-        <TextView
-            android:id="@+id/tvRecentTransactionsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/recent_transactions_margin"
-            android:fontFamily="@font/inter_semibold"
-            android:text="@string/recent_transactions"
-            android:textColor="@color/softerBlack"
-            android:textSize="@dimen/recent_transactions_text_size"
-            tools:ignore="RelativeOverlap" />
-
-        <TextView
-            android:id="@+id/tvSeeAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/recent_transactions_margin"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/see_all"
-            android:textColor="@color/defaultPurple"
-            android:paddingLeft="@dimen/recent_transactions_margin_end_start"
-            android:paddingRight="@dimen/recent_transactions_margin_end_start"
-            android:paddingTop="@dimen/recent_transactions_margin_top_bottom"
-            android:paddingBottom="@dimen/recent_transactions_margin_top_bottom"
-            android:background="@drawable/radius_background_color"
-            tools:ignore="RelativeOverlap" />
-    </RelativeLayout>
-
-    <Space
-        android:id="@+id/space"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/space_height"
-        app:layout_constraintTop_toBottomOf="@+id/recentTransactionsBar"
-        app:layout_constraintBottom_toTopOf="@id/rvTransactions" />
-
-    &lt;!&ndash; //todo change the width and height&ndash;&gt;
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTransactions"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        app:layout_constraintTop_toBottomOf="@+id/recentTransactionsBar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

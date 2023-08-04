@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        daySelectorBinding = TransactionsTimeSelectorBinding.bind(binding.daySelector.root)
+        daySelectorBinding = TransactionsTimeSelectorBinding.bind(binding.homeTop.daySelector.root)
 
 
         setRadioButtonSelectors()
