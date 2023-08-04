@@ -30,4 +30,5 @@
     <dimen name="income_box_margins">18dp</dimen>
     <dimen name="income_expense_icon_margin_start">16dp</dimen>
     <dimen name="income_expense_margin_start">10dp</dimen>
+    <dimen name="bottom_home_padding">20dp</dimen>
 </resources>

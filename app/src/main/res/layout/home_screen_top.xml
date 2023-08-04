@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/home_screen_top_screen_radius"
+    >
 
     <!-- //todo here it will be the toolbar-->
     <LinearLayout
@@ -55,7 +57,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/llDaySelector"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="@dimen/income_expense_margin"
         android:orientation="horizontal">
 
@@ -159,17 +161,5 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llDaySelector"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="@dimen/day_selector_margin">
-        <include
-            android:id="@+id/daySelector"
-            layout="@layout/transactions_time_selector" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
