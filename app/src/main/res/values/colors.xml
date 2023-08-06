@@ -16,11 +16,14 @@
     <color name="fullBlack">#FF000000</color>
     <color name="mediumBlack">#161719</color>
     <color name="softerBlack">#292B2D</color>
+    <color name="baseDark">#212325</color>
     <color name="negativeBalance">#FD3C4A</color>
     <color name="positiveBalance">#00A86B</color>
     <color name="orange">#FCAC12</color>
     <color name="lightOrange">#FCEED4</color>
     <color name="homeScreenStart">#fff7e6</color>
     <color name="homeScreenEnd">#fdfaf4</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="spinnerContainerStroke">#F1F1FA</color>
 
 </resources>

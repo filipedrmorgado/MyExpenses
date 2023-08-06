@@ -26,4 +26,11 @@
     <dimen name="income_expense_icon_margin_start">16dp</dimen>
     <dimen name="income_expense_margin_start">10dp</dimen>
     <dimen name="bottom_home_padding">20dp</dimen>
+    <dimen name="spinner_margin_end">10dp</dimen>
+    <dimen name="toolbar_icon_size">40dp</dimen>
+    <dimen name="toolbar_padding_sides">16dp</dimen>
+    <dimen name="toolbar_padding_top_bottom">12dp</dimen>
+    <dimen name="income_box_margin_right">14dp</dimen>
+    <dimen name="expense_box_margins">10dp</dimen>
+    <dimen name="home_screen_top_radius">35dp</dimen>
 </resources>

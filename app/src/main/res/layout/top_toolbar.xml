@@ -4,45 +4,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
+    android:paddingLeft="@dimen/toolbar_padding_sides"
+    android:paddingRight="@dimen/toolbar_padding_sides"
+    android:paddingTop="@dimen/toolbar_padding_top_bottom"
+    android:paddingBottom="@dimen/toolbar_padding_top_bottom"
     android:background="@color/homeScreenStart">
 
     <!-- Left Icon -->
     <ImageView
         android:id="@+id/ivLeftIcon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/toolbar_icon_size"
+        android:layout_height="@dimen/toolbar_icon_size"
         android:src="@drawable/ic_profile_toolbar"
         android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:importantForAccessibility="no" />
 
     <!-- Right Icon -->
     <ImageView
         android:id="@+id/ivRightIcon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/toolbar_icon_size"
+        android:layout_height="@dimen/toolbar_icon_size"
         android:src="@drawable/ic_notification"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:importantForAccessibility="no" />
 
-    <!-- Dropdown Selector -->
-    <Spinner
-        android:id="@+id/spinnerDropdown"
+    <!--//todo Create a custom spinner because of the dropdown-->
+    <LinearLayout
+        android:id="@+id/spinnerContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:background="@drawable/spinner_background"
-        android:entries="@array/dropdown_items"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:spinnerMode="dropdown"
-        android:spinnerStyle="@style/Widget.AppCompat.Spinner.DropDown"
+        android:background="@drawable/spinner_container_background"
         app:layout_constraintStart_toEndOf="@id/ivLeftIcon"
         app:layout_constraintEnd_toStartOf="@id/ivRightIcon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSpinnerIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_down_chevron"
+            android:clickable="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:importantForAccessibility="no" />
+
+        <!-- Dropdown Selector -->
+        <Spinner
+            android:id="@+id/spinnerDropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/dropdown_items"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:background="@color/transparent"
+            android:spinnerStyle="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_marginEnd="@dimen/spinner_margin_end"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

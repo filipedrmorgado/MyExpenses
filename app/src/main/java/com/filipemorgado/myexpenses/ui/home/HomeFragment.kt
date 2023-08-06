@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -24,16 +25,24 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         daySelectorBinding = TransactionsTimeSelectorBinding.bind(binding.homeBottom.daySelector.root)
-
-
         setRadioButtonSelectors()
-
+        setupDropDown()
         return binding.root
+    }
+
+    private fun setupDropDown() {
+        val adapter = ArrayAdapter.createFromResource(
+            requireContext(),
+            R.array.dropdown_items,
+            R.layout.spinner_layout // Use the custom layout for the spinner item
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.homeTop.topToolbar.spinnerDropdown.adapter = adapter
     }
 
     private fun setRadioButtonSelectors() {
         // Set a listener to the RadioGroup to detect selection changes
-        daySelectorBinding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
+        daySelectorBinding.radioGroup.setOnCheckedChangeListener { _, _ ->
             // Set the font family for all RadioButtons
             setFontFamilyToRadioButtons()
         }
@@ -52,9 +61,5 @@ class HomeFragment : Fragment() {
             }
             radioButton?.typeface = font
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }

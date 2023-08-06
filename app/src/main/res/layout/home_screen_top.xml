@@ -72,8 +72,8 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/income_expense_height"
             android:layout_weight="1"
-            android:layout_marginRight="@dimen/income_box_margins"
-            android:layout_marginLeft="@dimen/income_box_margins"
+            android:layout_marginEnd="@dimen/expense_box_margins"
+            android:layout_marginStart="@dimen/income_box_margins"
             android:background="@drawable/income_radius_background">
 
             <ImageView
@@ -121,8 +121,8 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/income_expense_height"
             android:layout_weight="1"
-            android:layout_marginRight="@dimen/income_box_margins"
-            android:layout_marginLeft="@dimen/income_box_margins"
+            android:layout_marginEnd="@dimen/income_box_margins"
+            android:layout_marginStart="@dimen/expense_box_margins"
             android:background="@drawable/expense_radius_background">
 
             <ImageView

@@ -4,8 +4,9 @@
         android:angle="270"
         android:startColor="@color/homeScreenStart"
         android:endColor="@color/homeScreenEnd" />
-    <corners android:topLeftRadius="0dp"
+    <corners
+        android:topLeftRadius="0dp"
         android:topRightRadius="0dp"
-        android:bottomLeftRadius="55dp"
-        android:bottomRightRadius="55dp"/>
+        android:bottomLeftRadius="@dimen/home_screen_top_radius"
+        android:bottomRightRadius="@dimen/home_screen_top_radius"/>
 </shape>
