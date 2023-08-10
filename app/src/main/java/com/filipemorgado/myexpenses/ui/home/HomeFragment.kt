@@ -30,6 +30,9 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Sets the dropdown custom text view
+     */
     private fun setupDropDown() {
         val adapter = ArrayAdapter.createFromResource(
             requireContext(),
@@ -40,6 +43,9 @@ class HomeFragment : Fragment() {
         binding.homeTop.topToolbar.spinnerDropdown.adapter = adapter
     }
 
+    /**
+     * Set Radio Button text and font family based on if it is selected or not
+     */
     private fun setRadioButtonSelectors() {
         // Set a listener to the RadioGroup to detect selection changes
         daySelectorBinding.radioGroup.setOnCheckedChangeListener { _, _ ->
