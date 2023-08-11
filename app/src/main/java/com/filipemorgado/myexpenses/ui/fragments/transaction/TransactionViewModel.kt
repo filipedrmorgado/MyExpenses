@@ -1,13 +1,13 @@
-package com.filipemorgado.myexpenses.ui.notifications
+package com.filipemorgado.myexpenses.ui.fragments.transaction
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ProfileViewModel : ViewModel() {
+class TransactionViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is profile Fragment"
+        value = "This is transaction Fragment"
     }
     val text: LiveData<String> = _text
 }

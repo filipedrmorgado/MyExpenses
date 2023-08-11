@@ -1,12 +1,12 @@
-package com.filipemorgado.myexpenses.ui.home
+package com.filipemorgado.myexpenses.ui.fragments.notifications
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 @Suppress("UNCHECKED_CAST")
-class HomeViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
+class ProfileViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return HomeViewModel() as T
+        return ProfileViewModel() as T
     }
 }

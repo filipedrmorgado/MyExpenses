@@ -1,12 +1,12 @@
-package com.filipemorgado.myexpenses.ui.budget
+package com.filipemorgado.myexpenses.ui.fragments.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
 @Suppress("UNCHECKED_CAST")
-class BudgetViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
+class HomeViewModelFactory() : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return BudgetViewModel() as T
+        return HomeViewModel() as T
     }
 }

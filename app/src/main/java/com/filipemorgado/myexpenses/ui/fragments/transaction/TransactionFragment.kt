@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses.ui.transaction
+package com.filipemorgado.myexpenses.ui.fragments.transaction
 
 import android.os.Bundle
 import android.view.LayoutInflater

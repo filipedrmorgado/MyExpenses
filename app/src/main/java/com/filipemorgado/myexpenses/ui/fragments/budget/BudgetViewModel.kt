@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses.ui.budget
+package com.filipemorgado.myexpenses.ui.fragments.budget
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses.ui.transaction
+package com.filipemorgado.myexpenses.ui.fragments.transaction
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

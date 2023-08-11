@@ -1,10 +1,10 @@
 package com.filipemorgado.myexpenses
 
 import android.app.Application
-import com.filipemorgado.myexpenses.ui.budget.BudgetViewModelFactory
-import com.filipemorgado.myexpenses.ui.transaction.TransactionViewModelFactory
-import com.filipemorgado.myexpenses.ui.home.HomeViewModelFactory
-import com.filipemorgado.myexpenses.ui.notifications.ProfileViewModelFactory
+import com.filipemorgado.myexpenses.ui.fragments.budget.BudgetViewModelFactory
+import com.filipemorgado.myexpenses.ui.fragments.transaction.TransactionViewModelFactory
+import com.filipemorgado.myexpenses.ui.fragments.home.HomeViewModelFactory
+import com.filipemorgado.myexpenses.ui.fragments.notifications.ProfileViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule

@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.filipemorgado.myexpenses.ui.home.HomeFragment"
+        android:name="com.filipemorgado.myexpenses.ui.fragments.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_transaction"
-        android:name="com.filipemorgado.myexpenses.ui.transaction.TransactionFragment"
+        android:name="com.filipemorgado.myexpenses.ui.fragments.transaction.TransactionFragment"
         android:label="@string/title_transaction"
         tools:layout="@layout/fragment_transaction" />
 
     <fragment
         android:id="@+id/navigation_budget"
-        android:name="com.filipemorgado.myexpenses.ui.budget.BudgetFragment"
+        android:name="com.filipemorgado.myexpenses.ui.fragments.budget.BudgetFragment"
         android:label="@string/title_budget"
         tools:layout="@layout/fragment_budget" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.filipemorgado.myexpenses.ui.notifications.ProfileFragment"
+        android:name="com.filipemorgado.myexpenses.ui.fragments.notifications.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 

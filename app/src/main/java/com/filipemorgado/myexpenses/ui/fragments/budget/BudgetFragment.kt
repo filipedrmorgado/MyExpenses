@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses.ui.budget
+package com.filipemorgado.myexpenses.ui.fragments.budget
 
 import android.os.Bundle
 import android.view.LayoutInflater

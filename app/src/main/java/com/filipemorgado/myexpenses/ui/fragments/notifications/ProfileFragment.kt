@@ -1,4 +1,4 @@
-package com.filipemorgado.myexpenses.ui.notifications
+package com.filipemorgado.myexpenses.ui.fragments.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
