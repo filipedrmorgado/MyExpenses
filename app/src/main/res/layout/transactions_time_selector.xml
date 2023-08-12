@@ -8,7 +8,7 @@
 
         <!-- Define a RadioButton for each option -->
         <RadioButton
-            android:id="@+id/radioDay"
+            android:id="@+id/radioToday"
             android:layout_width="0dp"
             android:layout_height="@dimen/timeline_height_selector"
             android:layout_weight="1"
