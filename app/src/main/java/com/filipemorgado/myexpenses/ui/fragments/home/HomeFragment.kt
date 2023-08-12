@@ -1,6 +1,7 @@
 package com.filipemorgado.myexpenses.ui.fragments.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ import com.filipemorgado.myexpenses.databinding.TransactionsTimeSelectorBinding
 import com.filipemorgado.myexpenses.model.DateRange
 import com.filipemorgado.myexpenses.model.Transaction
 import com.filipemorgado.myexpenses.ui.adapters.TransactionAdapter
+import com.filipemorgado.myexpenses.utilities.TAG_HOME_FRAGMENT
 import com.filipemorgado.myexpenses.utilities.TransactionsUtils
 
 class HomeFragment : Fragment() {
@@ -44,7 +46,10 @@ class HomeFragment : Fragment() {
         binding.homeBottom.rvTransactions.layoutManager = layoutManager
         //todo remove this mock, retrieve from user stored data. If none, replace with text in screen.
         val transactions: List<Transaction> = TransactionsUtils.getMockedTransactions()
-        transactionAdapter = TransactionAdapter(transactions)
+        val initialDateRange = setupInitialRadioFilter()
+        Log.i(TAG_HOME_FRAGMENT, "updateDateRange: transactions=$transactions, initialDateRange=$initialDateRange")
+
+        transactionAdapter = TransactionAdapter(transactions, initialDateRange)
         binding.homeBottom.rvTransactions.adapter = transactionAdapter
     }
 
@@ -55,7 +60,7 @@ class HomeFragment : Fragment() {
         val adapter = ArrayAdapter.createFromResource(
             requireContext(),
             R.array.dropdown_items,
-            R.layout.spinner_layout // Use the custom layout for the spinner item
+            R.layout.spinner_layout //todo Custom spinner, to be traded by a recycler view
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.homeTop.topToolbar.spinnerDropdown.adapter = adapter
@@ -77,18 +82,21 @@ class HomeFragment : Fragment() {
                 R.id.radioYear -> DateRange.YEAR
                 else -> DateRange.TODAY
             }
+            Log.i(TAG_HOME_FRAGMENT, "setRadioButtonSelectors: selectedDateRange=$selectedDateRange")
+
+            // Update date Range
+            homeViewModel.updateDateRange(selectedDateRange)
             // Filter transactions based on the selected date range
             transactionAdapter.filterTransactionsByDateRange(selectedDateRange)
         }
-        // Sets default values
+        // Sets initial values
         setFontFamilyToRadioButtons()
-        setInitialFilter()
     }
 
     /**
      * Sets filter based on the default selected RadioButton (if any)
      */
-    private fun setInitialFilter() {
+    private fun setupInitialRadioFilter(): DateRange {
         val defaultSelectedRadioButton = daySelectorBinding.radioGroup.checkedRadioButtonId
         val initialDateRange = when (defaultSelectedRadioButton) {
             R.id.radioToday -> DateRange.TODAY
@@ -97,7 +105,8 @@ class HomeFragment : Fragment() {
             R.id.radioYear -> DateRange.YEAR
             else -> DateRange.TODAY
         }
-        transactionAdapter.filterTransactionsByDateRange(initialDateRange)
+        homeViewModel.updateDateRange(initialDateRange)
+        return initialDateRange
     }
 
     /**

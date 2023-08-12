@@ -1,18 +1,23 @@
 package com.filipemorgado.myexpenses.ui.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.filipemorgado.myexpenses.R
 import com.filipemorgado.myexpenses.databinding.RecentTransactionsItemBinding
 import com.filipemorgado.myexpenses.model.DateRange
 import com.filipemorgado.myexpenses.model.Transaction
 import com.filipemorgado.myexpenses.utilities.DateUtils.isWithinFilter
+import com.filipemorgado.myexpenses.utilities.TAG_TRANSACTION_ADAPTER
 
-class TransactionAdapter(private val allTransactions: List<Transaction>) : RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
+class TransactionAdapter(
+    private val allTransactions: List<Transaction>,
+    initialDateRange: DateRange,
+): RecyclerView.Adapter<TransactionViewHolder>() {
 
     private var filteredTransactions: List<Transaction> = allTransactions
+    private var dateRange: DateRange = initialDateRange
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -22,7 +27,7 @@ class TransactionAdapter(private val allTransactions: List<Transaction>) : Recyc
 
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         val transaction = filteredTransactions[position]
-        holder.bind(transaction)
+        holder.bind(transaction, dateRange)
     }
 
     override fun getItemCount(): Int = filteredTransactions.size
@@ -32,6 +37,9 @@ class TransactionAdapter(private val allTransactions: List<Transaction>) : Recyc
      */
     @SuppressLint("NotifyDataSetChanged")
     fun filterTransactionsByDateRange(dateRange: DateRange) {
+        Log.i(TAG_TRANSACTION_ADAPTER, "filterTransactionsByDateRange: dateRange=$dateRange, filteredTransactions=$filteredTransactions")
+        // Update the date range
+        this.dateRange = dateRange
         filteredTransactions = allTransactions.filter { transaction ->
             when (dateRange) {
                 DateRange.TODAY -> transaction.date.isWithinFilter(DateRange.TODAY)
@@ -41,17 +49,5 @@ class TransactionAdapter(private val allTransactions: List<Transaction>) : Recyc
             }
         }
         notifyDataSetChanged()
-    }
-
-    inner class TransactionViewHolder(private val binding: RecentTransactionsItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(transaction: Transaction) {
-            //todo check how to do it later on
-            binding.icTransaction.setImageResource(R.drawable.ic_transaction)
-            binding.tvTransactionCategory.text = transaction.category
-            binding.tvTransactionDescription.text = transaction.description
-            binding.tvAmount.text = transaction.amount.toString()
-            //todo format as expected
-            binding.tvTransactionTime.text = transaction.date.toString()
-        }
     }
 }
