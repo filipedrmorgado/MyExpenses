@@ -8,7 +8,9 @@ import com.filipemorgado.myexpenses.databinding.RecentTransactionsItemBinding
 import com.filipemorgado.myexpenses.model.DateRange
 import com.filipemorgado.myexpenses.model.Transaction
 import com.filipemorgado.myexpenses.model.TransactionType
+import com.filipemorgado.myexpenses.utilities.DateUtils
 import com.filipemorgado.myexpenses.utilities.TAG_TRANSACTION_VIEW_HOLDER
+import java.util.Date
 
 class TransactionViewHolder(private val binding: RecentTransactionsItemBinding,private val context: Context) : RecyclerView.ViewHolder(binding.root) {
 
@@ -21,7 +23,7 @@ class TransactionViewHolder(private val binding: RecentTransactionsItemBinding,p
         binding.tvTransactionDescription.text = transaction.description
         setTextAmount(transaction)
         //todo format as expected
-        binding.tvTransactionTime.text = transaction.date.toString()
+        setupDateFormat(transaction.date, dateRange)
     }
 
     private fun setTextAmount(transaction: Transaction) {
@@ -37,7 +39,12 @@ class TransactionViewHolder(private val binding: RecentTransactionsItemBinding,p
     /**
      * Setups date format to be shown, depending on the dateRage
      */
-    private fun setupDateFormat() {
-
+    private fun setupDateFormat(dateToBeDisplayed: Date, dateRange: DateRange) {
+        val formattedDate = when (dateRange) {
+            DateRange.TODAY -> DateUtils.formatDate(dateToBeDisplayed, "hh:mm a")
+            DateRange.WEEK, DateRange.MONTH, DateRange.YEAR ->
+                DateUtils.formatDate(dateToBeDisplayed, "dd/MMM hh:mm a")
+        }
+        binding.tvTransactionTime.text = formattedDate
     }
 }

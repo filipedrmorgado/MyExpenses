@@ -35,6 +35,8 @@
             android:textColor="@color/softerBlack"
             android:textSize="@dimen/transaction_list_main_text"
             android:layout_weight="2"
+            android:ellipsize="end"
+            android:singleLine="true"
             tools:ignore="NestedWeights" />
         <TextView
             android:id="@+id/tvTransactionDescription"
@@ -44,6 +46,8 @@
             android:text="@string/transaction_description"
             android:textColor="@color/lightGrey"
             android:textSize="@dimen/transaction_list_secondary_text"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:layout_weight="1"/>
 
     </LinearLayout>

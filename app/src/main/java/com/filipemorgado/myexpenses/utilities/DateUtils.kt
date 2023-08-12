@@ -1,8 +1,10 @@
 package com.filipemorgado.myexpenses.utilities
 
 import com.filipemorgado.myexpenses.model.DateRange
+import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 
 object DateUtils {
 
@@ -40,4 +42,12 @@ object DateUtils {
         return cal.get(Calendar.YEAR) == currentDate.get(Calendar.YEAR)
     }
     // End of Date filtering Section
+
+    // Date formatter
+    fun formatDate(date: Date, pattern: String): String {
+        val formatter = SimpleDateFormat(pattern, Locale.getDefault())
+        return formatter.format(date)
+    }
+    // End Date formatter
+
 }
