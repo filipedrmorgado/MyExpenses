@@ -1,14 +1,16 @@
 package com.filipemorgado.myexpenses.ui.adapters
 
+import android.content.Context
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.filipemorgado.myexpenses.R
 import com.filipemorgado.myexpenses.databinding.RecentTransactionsItemBinding
 import com.filipemorgado.myexpenses.model.DateRange
 import com.filipemorgado.myexpenses.model.Transaction
+import com.filipemorgado.myexpenses.model.TransactionType
 import com.filipemorgado.myexpenses.utilities.TAG_TRANSACTION_VIEW_HOLDER
 
-class TransactionViewHolder(private val binding: RecentTransactionsItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class TransactionViewHolder(private val binding: RecentTransactionsItemBinding,private val context: Context) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(transaction: Transaction, dateRange: DateRange) {
         Log.i(TAG_TRANSACTION_VIEW_HOLDER, "bind: dateRange=$dateRange")
@@ -17,9 +19,19 @@ class TransactionViewHolder(private val binding: RecentTransactionsItemBinding) 
         binding.icTransaction.setImageResource(R.drawable.ic_transaction)
         binding.tvTransactionCategory.text = transaction.category
         binding.tvTransactionDescription.text = transaction.description
-        binding.tvAmount.text = transaction.amount.toString()
+        setTextAmount(transaction)
         //todo format as expected
         binding.tvTransactionTime.text = transaction.date.toString()
+    }
+
+    private fun setTextAmount(transaction: Transaction) {
+        if(transaction.transactionType == TransactionType.INCOME) {
+            binding.tvAmount.text = context.getString(R.string.positive_transaction_amount, transaction.amount.toString())
+            binding.tvAmount.setTextColor(context.getColor(R.color.positiveBalance))
+        } else {
+            binding.tvAmount.text = context.getString(R.string.negative_transaction_amount, transaction.amount.toString())
+            binding.tvAmount.setTextColor(context.getColor(R.color.negativeBalance))
+        }
     }
 
     /**

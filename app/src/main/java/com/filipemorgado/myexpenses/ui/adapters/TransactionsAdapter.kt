@@ -16,13 +16,13 @@ class TransactionAdapter(
     initialDateRange: DateRange,
 ): RecyclerView.Adapter<TransactionViewHolder>() {
 
-    private var filteredTransactions: List<Transaction> = allTransactions
+    private var filteredTransactions: List<Transaction> = filteredTransactions(initialDateRange)
     private var dateRange: DateRange = initialDateRange
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransactionViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = RecentTransactionsItemBinding.inflate(inflater, parent, false)
-        return TransactionViewHolder(binding)
+        return TransactionViewHolder(binding, parent.context)
     }
 
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
@@ -40,14 +40,20 @@ class TransactionAdapter(
         Log.i(TAG_TRANSACTION_ADAPTER, "filterTransactionsByDateRange: dateRange=$dateRange, filteredTransactions=$filteredTransactions")
         // Update the date range
         this.dateRange = dateRange
-        filteredTransactions = allTransactions.filter { transaction ->
-            when (dateRange) {
-                DateRange.TODAY -> transaction.date.isWithinFilter(DateRange.TODAY)
-                DateRange.WEEK -> transaction.date.isWithinFilter(DateRange.WEEK)
-                DateRange.MONTH -> transaction.date.isWithinFilter(DateRange.MONTH)
-                DateRange.YEAR -> transaction.date.isWithinFilter(DateRange.YEAR)
-            }
-        }
+        filteredTransactions = filteredTransactions(dateRange)
         notifyDataSetChanged()
     }
+
+    /**
+     * Returns a list of transactions based on TODAY, WEEK, MONTH and YEAR.
+     */
+    private fun filteredTransactions(dateRange: DateRange) = allTransactions.filter { transaction ->
+        when (dateRange) {
+            DateRange.TODAY -> transaction.date.isWithinFilter(DateRange.TODAY)
+            DateRange.WEEK -> transaction.date.isWithinFilter(DateRange.WEEK)
+            DateRange.MONTH -> transaction.date.isWithinFilter(DateRange.MONTH)
+            DateRange.YEAR -> transaction.date.isWithinFilter(DateRange.YEAR)
+        }
+    }
+
 }

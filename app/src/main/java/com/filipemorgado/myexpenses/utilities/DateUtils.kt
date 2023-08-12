@@ -37,7 +37,7 @@ object DateUtils {
 
     private fun Date.isWithinLastYear(currentDate: Calendar): Boolean {
         val cal = Calendar.getInstance().apply { time = this@isWithinLastYear }
-        return cal.get(Calendar.YEAR) == currentDate.get(Calendar.YEAR) - 1
+        return cal.get(Calendar.YEAR) == currentDate.get(Calendar.YEAR)
     }
     // End of Date filtering Section
 }
