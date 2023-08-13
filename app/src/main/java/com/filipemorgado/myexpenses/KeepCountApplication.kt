@@ -4,6 +4,7 @@ import android.app.Application
 import com.filipemorgado.myexpenses.ui.fragments.budget.BudgetViewModelFactory
 import com.filipemorgado.myexpenses.ui.fragments.transaction.TransactionViewModelFactory
 import com.filipemorgado.myexpenses.ui.fragments.home.HomeViewModelFactory
+import com.filipemorgado.myexpenses.ui.fragments.invoice.ExpenseViewModelFactory
 import com.filipemorgado.myexpenses.ui.fragments.notifications.ProfileViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -28,5 +29,6 @@ class KeepCountApplication: Application(), KodeinAware {
         bind() from provider { BudgetViewModelFactory() }
         bind() from provider { ProfileViewModelFactory() }
         bind() from provider { HomeViewModelFactory() }
+        bind() from provider { ExpenseViewModelFactory() }
     }
 }

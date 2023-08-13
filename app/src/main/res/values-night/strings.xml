@@ -21,6 +21,7 @@
     <string name="value_5000">$5000</string>
     <string name="expenses">Expenses</string>
     <string name="value_1200">$1200</string>
+    <string name="Expense">Expense</string>
     <string-array name="dropdown_items">
         <item>January</item>
         <item>February</item>

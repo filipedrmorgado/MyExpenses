@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.filipemorgado.myexpenses.R
 import com.filipemorgado.myexpenses.databinding.FragmentHomeBinding
@@ -24,6 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var daySelectorBinding: TransactionsTimeSelectorBinding
     private val homeViewModel: HomeViewModel by activityViewModels()
+    private lateinit var navController : NavController
 
     // Transaction Recycler
     private lateinit var transactionAdapter: TransactionAdapter
@@ -35,10 +38,27 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         daySelectorBinding = TransactionsTimeSelectorBinding.bind(binding.homeBottom.daySelector.root)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        navController = Navigation.findNavController(view)
+        setupObservers()
         setupRecyclerView()
         setRadioButtonSelectors()
         setupDropDown()
-        return binding.root
+    }
+
+
+    private fun setupObservers() {
+        binding.homeTop.llIncomeBox.setOnClickListener {
+            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense)
+        }
+    }
+
+    private fun navigateToNewScreen(navigationAction: Int) {
+        navController.navigate(navigationAction)
     }
 
     private fun setupRecyclerView() {

@@ -22,6 +22,7 @@
     <string name="value_1200">$1200</string>
     <string name="positive_transaction_amount">$%s</string>
     <string name="negative_transaction_amount">-$%s</string>
+    <string name="Expense">Expense</string>
     <string-array name="dropdown_items">
         <item>January</item>
         <item>February</item>

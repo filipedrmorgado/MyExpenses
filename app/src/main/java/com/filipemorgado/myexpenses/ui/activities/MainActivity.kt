@@ -1,8 +1,10 @@
 package com.filipemorgado.myexpenses.ui.activities
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.filipemorgado.myexpenses.R
@@ -37,6 +39,10 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     private lateinit var budgetViewModel: BudgetViewModel
     private lateinit var homeViewModel: HomeViewModel
 
+    // Navigation
+    private lateinit var navController: NavController
+    private lateinit var destinationChangedListener: NavController.OnDestinationChangedListener
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -61,7 +67,26 @@ class MainActivity : AppCompatActivity(), KodeinAware {
      */
     //todo set a custom BottomNavigationView
     private fun initNavigation() {
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController = findNavController(R.id.nav_host_fragment_activity_main)
         binding.navView.setupWithNavController(navController)
+        // Set up OnDestinationChangedListener, we should hide navigation view when trying to go to fullscreen fragments
+        destinationChangedListener =
+            NavController.OnDestinationChangedListener { _, destination, _ ->
+                if (destination.id == R.id.navigation_home || destination.id == R.id.navigation_budget
+                    || destination.id == R.id.navigation_transaction || destination.id == R.id.navigation_profile) {
+                    // Show the BottomNavigationView on the home screen
+                    binding.navView.visibility = View.VISIBLE
+                } else {
+                    // Hide the BottomNavigationView on other screens
+                    binding.navView.visibility = View.GONE
+                }
+            }
+        navController.addOnDestinationChangedListener(destinationChangedListener)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Remove the listener when the activity is destroyed
+        navController.removeOnDestinationChangedListener(destinationChangedListener)
     }
 }

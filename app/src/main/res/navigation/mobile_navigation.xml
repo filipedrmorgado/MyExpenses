@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.filipemorgado.myexpenses.ui.fragments.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_expense"
+            app:destination="@id/navigation_expense" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_transaction"
@@ -28,5 +32,11 @@
         android:name="com.filipemorgado.myexpenses.ui.fragments.notifications.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_expense"
+        android:name="com.filipemorgado.myexpenses.ui.fragments.invoice.ExpenseFragment"
+        android:label="@string/Expense"
+        tools:layout="@layout/fragment_expense" />
 
 </navigation>
