@@ -25,7 +25,9 @@
     <string name="expense_how_much">How much?</string>
     <string name="exchange_default_currency">$</string>
     <string name="expense_default_amount">0</string>
-    <string-array name="dropdown_items">
+    <string name="expenses_category_spinner">Category</string>
+    <string name="expenses_wallet_spinner">Wallet</string>
+    <string-array name="monthly_items_array">
         <item>January</item>
         <item>February</item>
         <item>March</item>
@@ -38,5 +40,11 @@
         <item>October</item>
         <item>November</item>
         <item>December</item>
+    </string-array>
+    <string-array name="category_dropdown">
+        <item>Subscription</item>
+        <item>Salary</item>
+        <item>Food</item>
+        <item>Other</item>
     </string-array>
 </resources>

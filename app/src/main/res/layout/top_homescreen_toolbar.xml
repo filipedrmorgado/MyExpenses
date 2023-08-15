@@ -63,7 +63,7 @@
             android:id="@+id/spinnerDropdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/dropdown_items"
+            android:entries="@array/monthly_items_array"
             android:gravity="center"
             android:spinnerMode="dropdown"
             android:background="@color/transparent"

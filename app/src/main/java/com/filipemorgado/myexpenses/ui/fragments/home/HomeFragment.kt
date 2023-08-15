@@ -79,7 +79,7 @@ class HomeFragment : Fragment() {
     private fun setupDropDown() {
         val adapter = ArrayAdapter.createFromResource(
             requireContext(),
-            R.array.dropdown_items,
+            R.array.monthly_items_array,
             R.layout.spinner_layout //todo Custom spinner, to be traded by a recycler view
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)

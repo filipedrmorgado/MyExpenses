@@ -34,4 +34,11 @@
     <dimen name="expense_box_margins">10dp</dimen>
     <dimen name="home_screen_top_radius">35dp</dimen>
     <dimen name="expense_toolbar_size">32dp</dimen>
+    <dimen name="expenses_4_items_dropdown">224dp</dimen>
+    <dimen name="expenses_spinner_padding_top_bottom">15dp</dimen>
+    <dimen name="expenses_spinner_padding_left_right">10dp</dimen>
+    <dimen name="expenses_spinner_margins">16dp</dimen>
+    <dimen name="expenses_initial_margin_top">24dp</dimen>
+    <dimen name="expenses_spinner_item_height">56dp</dimen>
+    <dimen name="text_size_m">16sp</dimen>
 </resources>
