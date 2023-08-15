@@ -28,6 +28,9 @@
     <string name="expense_default_amount">0</string>
     <string name="expenses_category_spinner">Category</string>
     <string name="expenses_wallet_spinner">Wallet</string>
+    <string name="tv_repeat_description">Repeat transaction</string>
+    <string name="tv_repeat">Repeat</string>
+    <string name="expenses_add_attachment">Add Attachment</string>
     <string-array name="monthly_items_array">
         <item>January</item>
         <item>February</item>
@@ -48,5 +51,10 @@
         <item>Salary</item>
         <item>Food</item>
         <item>Other</item>
+    </string-array>
+
+    <!-- //todo deal with multiple wallets -->
+    <string-array name="walletDropdown">
+        <item>Main Wallet</item>
     </string-array>
 </resources>

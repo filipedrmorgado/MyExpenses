@@ -46,4 +46,5 @@
     <dimen name="expenses_initial_margin_top">24dp</dimen>
     <dimen name="expenses_spinner_item_height">56dp</dimen>
     <dimen name="text_size_m">16sp</dimen>
+    <dimen name="text_size_s">13sp</dimen>
 </resources>

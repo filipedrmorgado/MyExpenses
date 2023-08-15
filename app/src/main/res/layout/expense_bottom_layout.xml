@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="16dp"
@@ -49,7 +48,6 @@
         android:hint="@string/transaction_description"
         android:textColorHint="@color/lightGrey"
         android:textSize="@dimen/text_size_m"
-
         android:gravity="center|start"
         android:paddingStart="@dimen/expenses_spinner_padding_top_bottom"
         android:paddingEnd="@dimen/expenses_spinner_padding_top_bottom"
@@ -59,11 +57,9 @@
         android:layout_marginStart="@dimen/expenses_spinner_margins"
         android:layout_marginEnd="@dimen/expenses_spinner_margins"
         android:layout_marginBottom="@dimen/expenses_spinner_margins"
-
         app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.skydoves.powerspinner.PowerSpinnerView
         android:id="@+id/spinnerWallet"
@@ -96,6 +92,91 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/llAttachments"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:clickable="false"
+        android:background="@drawable/expenses_dashed_container_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingEnd="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingTop="@dimen/expenses_spinner_padding_left_right"
+        android:paddingBottom="@dimen/expenses_spinner_padding_left_right"
+        android:layout_marginTop="@dimen/expenses_initial_margin_top"
+        android:layout_marginStart="@dimen/expenses_spinner_margins"
+        android:layout_marginEnd="@dimen/expenses_spinner_margins"
+        android:layout_marginBottom="@dimen/expenses_spinner_margins"
+        app:layout_constraintTop_toBottomOf="@id/spinnerWallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attachment"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_m"
+            android:textColor="@color/baseDark"
+            android:textColorHint="@color/lightGrey"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:hint="@string/expenses_add_attachment" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRepeatTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/baseDark"
+        android:text="@string/tv_repeat"
+        android:textSize="@dimen/text_size_m"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingEnd="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingBottom="@dimen/expenses_spinner_padding_left_right"
+        android:layout_marginTop="@dimen/expenses_initial_margin_top"
+        android:layout_marginStart="@dimen/expenses_spinner_margins"
+        android:layout_marginEnd="@dimen/expenses_spinner_margins"
+        android:layout_marginBottom="@dimen/expenses_spinner_margins"
+        app:layout_constraintTop_toBottomOf="@id/llAttachments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRepeatDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/lightGrey"
+        android:text="@string/tv_repeat_description"
+        android:textSize="@dimen/text_size_s"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingEnd="@dimen/expenses_spinner_padding_top_bottom"
+        android:paddingBottom="@dimen/expenses_spinner_padding_left_right"
+        android:layout_marginStart="@dimen/expenses_spinner_margins"
+        android:layout_marginEnd="@dimen/expenses_spinner_margins"
+        android:layout_marginBottom="@dimen/expenses_spinner_margins"
+        app:layout_constraintTop_toBottomOf="@id/tvRepeatTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:track="@drawable/switch_thumb_selector"
+        app:thumbTint="@color/white"
+        android:layout_marginTop="@dimen/expenses_initial_margin_top"
+        android:layout_marginEnd="@dimen/expenses_spinner_margins"
+        android:layout_marginBottom="@dimen/expenses_spinner_margins"
+        app:layout_constraintTop_toBottomOf="@id/tvRepeatTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvRepeatTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
