@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/toolbar_padding_sides"
+    android:paddingRight="@dimen/toolbar_padding_sides"
+    android:paddingTop="@dimen/toolbar_padding_top_bottom"
+    android:paddingBottom="@dimen/toolbar_padding_top_bottom"
+    android:background="@color/negativeBalance">
+
+    <!-- Left Icon -->
+    <ImageView
+        android:id="@+id/ivLeftIcon"
+        android:layout_width="@dimen/expense_toolbar_size"
+        android:layout_height="@dimen/expense_toolbar_size"
+        android:src="@drawable/ic_arrow_left"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:importantForAccessibility="no" />
+
+    <!-- Right Icon -->
+    <TextView
+        android:id="@+id/ivRightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_notification"
+        android:text="@string/Expense"
+        android:textSize="18sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:importantForAccessibility="no" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

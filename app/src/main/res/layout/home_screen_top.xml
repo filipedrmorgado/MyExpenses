@@ -12,7 +12,7 @@
 
     <include
         android:id="@+id/topToolbar"
-        layout="@layout/top_toolbar"
+        layout="@layout/top_homescreen_toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tvAccBalance" />

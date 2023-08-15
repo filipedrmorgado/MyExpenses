@@ -4,21 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/negativeBalance"
     tools:context=".ui.fragments.transaction.TransactionFragment">
 
+
+    <include
+        android:id="@+id/top_expense_toolbar"
+        layout="@layout/top_expense_toolbar" />
+
     <TextView
-        android:id="@+id/text_transaction"
-        android:layout_width="match_parent"
+        android:id="@+id/tvHowMuch"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:text="@string/Expense"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/expense_how_much"
+        android:textSize="18sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/lightWhite"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="59dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/top_expense_toolbar" />
+
+    <TextView
+        android:id="@+id/tvExchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exchange_default_currency"
+        android:textSize="64sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/white"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHowMuch" />
+
+    <TextView
+        android:id="@+id/tvExpenseAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expense_default_amount"
+        android:textSize="64sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toEndOf="@+id/tvExchange"
+        app:layout_constraintTop_toBottomOf="@+id/tvHowMuch" />
+
+    <include
+        android:id="@+id/expenseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        layout="@layout/expense_bottom_layout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpenseAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

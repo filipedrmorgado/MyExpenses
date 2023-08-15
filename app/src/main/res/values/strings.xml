@@ -23,6 +23,9 @@
     <string name="positive_transaction_amount">$%s</string>
     <string name="negative_transaction_amount">-$%s</string>
     <string name="Expense">Expense</string>
+    <string name="expense_how_much">How much?</string>
+    <string name="exchange_default_currency">$</string>
+    <string name="expense_default_amount">0</string>
     <string-array name="dropdown_items">
         <item>January</item>
         <item>February</item>

@@ -25,5 +25,6 @@
     <color name="homeScreenEnd">#fdfaf4</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="spinnerContainerStroke">#F1F1FA</color>
+    <color name="lightWhite">#A3FCFCFC</color>
 
 </resources>

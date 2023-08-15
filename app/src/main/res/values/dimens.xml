@@ -38,4 +38,5 @@
     <dimen name="income_box_margin_right">14dp</dimen>
     <dimen name="expense_box_margins">10dp</dimen>
     <dimen name="home_screen_top_radius">35dp</dimen>
+    <dimen name="expense_toolbar_size">32dp</dimen>
 </resources>
