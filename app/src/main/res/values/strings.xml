@@ -22,12 +22,12 @@
     <string name="value_1200">$1200</string>
     <string name="positive_transaction_amount">$%s</string>
     <string name="negative_transaction_amount">-$%s</string>
-    <string name="Expense">Expense</string>
+    <string name="expense">Expense</string>
     <string name="expense_how_much">How much?</string>
     <string name="exchange_default_currency">$</string>
     <string name="expense_default_amount">0</string>
     <string name="expenses_category_spinner">Category</string>
-    <string name="expenses_wallet_spinner">Wallet</string>
+    <string name="expenses_wallet_spinner">Main Wallet</string>
     <string name="tv_repeat_description">Repeat transaction</string>
     <string name="tv_repeat">Repeat</string>
     <string name="expenses_add_attachment">Add Attachment</string>

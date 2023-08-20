@@ -17,6 +17,7 @@ import com.filipemorgado.myexpenses.databinding.FragmentHomeBinding
 import com.filipemorgado.myexpenses.databinding.TransactionsTimeSelectorBinding
 import com.filipemorgado.myexpenses.model.DateRange
 import com.filipemorgado.myexpenses.model.Transaction
+import com.filipemorgado.myexpenses.model.TransactionType
 import com.filipemorgado.myexpenses.ui.adapters.TransactionAdapter
 import com.filipemorgado.myexpenses.utilities.TAG_HOME_FRAGMENT
 import com.filipemorgado.myexpenses.utilities.TransactionsUtils
@@ -53,12 +54,18 @@ class HomeFragment : Fragment() {
 
     private fun setupObservers() {
         binding.homeTop.llIncomeBox.setOnClickListener {
-            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense)
+            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.INCOME)
+        }
+        binding.homeTop.llExpenseBox.setOnClickListener {
+            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.EXPENSE)
         }
     }
 
-    private fun navigateToNewScreen(navigationAction: Int) {
-        navController.navigate(navigationAction)
+    private fun navigateToNewScreen(navigationAction: Int, transactionType: TransactionType) {
+        val bundle = Bundle().apply {
+            putSerializable("transactionType", transactionType)
+        }
+        navController.navigate(navigationAction, bundle)
     }
 
     private fun setupRecyclerView() {

@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_navigation_expense"
-            app:destination="@id/navigation_expense" />
+            app:destination="@id/navigation_expense">
+            <argument
+                android:name="transactionType"
+                app:argType="com.filipemorgado.myexpenses.model.TransactionType" />
+        </action>
     </fragment>
 
     <fragment
@@ -36,7 +40,7 @@
     <fragment
         android:id="@+id/navigation_expense"
         android:name="com.filipemorgado.myexpenses.ui.fragments.invoice.ExpenseFragment"
-        android:label="@string/Expense"
+        android:label="@string/expense"
         tools:layout="@layout/fragment_expense" />
 
 </navigation>

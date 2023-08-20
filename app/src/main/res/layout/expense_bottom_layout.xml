@@ -83,7 +83,7 @@
         app:spinner_arrow_drawable="@drawable/ic_arrow_down"
         app:spinner_arrow_tint="@color/lightGrey"
         app:spinner_divider_color="@color/lightGrey"
-        app:spinner_item_array="@array/category_dropdown"
+        app:spinner_item_array="@array/walletDropdown"
         app:spinner_item_height="@dimen/expenses_spinner_item_height"
         app:spinner_popup_animation="dropdown"
         app:spinner_popup_background="@color/white"
