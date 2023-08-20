@@ -31,6 +31,7 @@
     <string name="tv_repeat_description">Repeat transaction</string>
     <string name="tv_repeat">Repeat</string>
     <string name="expenses_add_attachment">Add Attachment</string>
+    <string name="btn_continue">Continue</string>
     <string-array name="monthly_items_array">
         <item>January</item>
         <item>February</item>

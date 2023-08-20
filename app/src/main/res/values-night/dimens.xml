@@ -42,4 +42,6 @@
     <dimen name="expenses_spinner_item_height">56dp</dimen>
     <dimen name="text_size_m">16sp</dimen>
     <dimen name="text_size_s">13sp</dimen>
+    <dimen name="text_size_l">18sp</dimen>
+    <dimen name="btn_radius">16dp</dimen>
 </resources>

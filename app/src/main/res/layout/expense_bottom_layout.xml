@@ -179,4 +179,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/tvRepeatTitle" />
 
+    <!-- //todo Missing black bar at the bottom to swipe up -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/btn_background_style"
+        android:textColor="@color/white"
+        android:text="@string/btn_continue"
+        android:textSize="@dimen/text_size_l"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/expenses_initial_margin_top"
+        android:layout_marginStart="@dimen/expenses_spinner_margins"
+        android:layout_marginEnd="@dimen/expenses_spinner_margins"
+        android:layout_marginBottom="@dimen/expenses_spinner_margins"
+        app:layout_constraintTop_toBottomOf="@id/tvRepeatDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
