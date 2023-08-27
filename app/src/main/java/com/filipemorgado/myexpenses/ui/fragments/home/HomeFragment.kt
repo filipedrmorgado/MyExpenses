@@ -54,14 +54,20 @@ class HomeFragment : Fragment() {
 
     private fun setupObservers() {
         binding.homeTop.llIncomeBox.setOnClickListener {
-            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.INCOME)
+            navigateToTransactionScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.INCOME)
         }
         binding.homeTop.llExpenseBox.setOnClickListener {
-            navigateToNewScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.EXPENSE)
+            navigateToTransactionScreen(R.id.action_navigation_home_to_navigation_expense, TransactionType.EXPENSE)
         }
     }
 
-    private fun navigateToNewScreen(navigationAction: Int, transactionType: TransactionType) {
+    /**
+     * Allows to navigate to a new transaction screen
+     *
+     * @param navigationAction indicates where to navigate
+     * @param transactionType indicates what type of transaction we will perform
+     */
+    private fun navigateToTransactionScreen(navigationAction: Int, transactionType: TransactionType) {
         val bundle = Bundle().apply {
             putSerializable("transactionType", transactionType)
         }
@@ -132,12 +138,13 @@ class HomeFragment : Fragment() {
             R.id.radioYear -> DateRange.YEAR
             else -> DateRange.TODAY
         }
+        Log.i(TAG_HOME_FRAGMENT, "setupInitialRadioFilter: defaultSelectedRadioButton=$defaultSelectedRadioButton, initialDateRange=$initialDateRange")
         homeViewModel.updateDateRange(initialDateRange)
         return initialDateRange
     }
 
     /**
-     * Set the initial font family based on the default selected RadioButton (if any)
+     * Set the initial font family based on the selected RadioButton
      */
     private fun setFontFamilyToRadioButtons() {
         for (i in 0 until daySelectorBinding.radioGroup.childCount) {

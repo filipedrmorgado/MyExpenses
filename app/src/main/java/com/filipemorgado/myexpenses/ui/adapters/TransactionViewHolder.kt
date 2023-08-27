@@ -15,17 +15,18 @@ import java.util.Date
 class TransactionViewHolder(private val binding: RecentTransactionsItemBinding,private val context: Context) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(transaction: Transaction, dateRange: DateRange) {
-        Log.i(TAG_TRANSACTION_VIEW_HOLDER, "bind: dateRange=$dateRange")
-
+        Log.i(TAG_TRANSACTION_VIEW_HOLDER, "bind: dateRange=$dateRange, transaction=$transaction")
         //todo check how to do it later on
         binding.icTransaction.setImageResource(R.drawable.ic_transaction)
         binding.tvTransactionCategory.text = transaction.category
         binding.tvTransactionDescription.text = transaction.description
         setTextAmount(transaction)
-        //todo format as expected
         setupDateFormat(transaction.date, dateRange)
     }
 
+    /**
+     * Sets the text amount negative/positive and color text
+     */
     private fun setTextAmount(transaction: Transaction) {
         if(transaction.transactionType == TransactionType.INCOME) {
             binding.tvAmount.text = context.getString(R.string.positive_transaction_amount, transaction.amount.toString())

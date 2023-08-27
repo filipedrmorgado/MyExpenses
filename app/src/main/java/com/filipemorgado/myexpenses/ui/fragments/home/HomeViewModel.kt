@@ -14,6 +14,9 @@ class HomeViewModel : ViewModel() {
     val dateRange: LiveData<DateRange> = _dateRange
 
 
+    /**
+     * Updates the current selected date range to display the transactions
+     */
     fun updateDateRange(dateRange: DateRange) {
         Log.i(TAG_HOME_VIEW_MODEL, "updateDateRange: dateRange=$dateRange")
         _dateRange.value = dateRange

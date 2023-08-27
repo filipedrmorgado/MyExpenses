@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.filipemorgado.myexpenses.databinding.ActivitySplashMainBinding
 import com.filipemorgado.myexpenses.utilities.SPLASH_SCREEN_DURATION
 
+/**
+ * Activity used only just for the splash screen
+ */
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
