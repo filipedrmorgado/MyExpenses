@@ -70,5 +70,11 @@ class ExpenseFragment : Fragment() {
                 }
             }
         }
+
+        binding.expenseDetails.spinnerWallet.apply {
+            //todo set the items later from the user wallet list
+            selectItemByIndex(0) // selected a default item
+            lifecycleOwner = this@ExpenseFragment
+        }
     }
 }
