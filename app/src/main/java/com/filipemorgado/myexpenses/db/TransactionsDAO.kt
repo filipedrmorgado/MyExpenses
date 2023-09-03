@@ -5,21 +5,20 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.filipemorgado.myexpenses.model.Transaction
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TransactionsDAO {
 
     @Insert
-    suspend fun addTransaction(transaction: Transaction)
+    suspend fun addTransaction(transaction: TransactionEntity)
 
     @Delete
-    suspend fun deleteTransaction(transaction: Transaction)
+    suspend fun deleteTransaction(transaction: TransactionEntity)
 
     @Update
-    suspend fun updateTransaction(transaction: Transaction)
+    suspend fun updateTransaction(transaction: TransactionEntity)
 
     @Query("SELECT * FROM transaction_table ORDER BY date ASC")
-    suspend fun getTransactionByDate(): Flow<List<Transaction>>
+    fun getTransactionByDate(): Flow<List<TransactionEntity>>
 }
