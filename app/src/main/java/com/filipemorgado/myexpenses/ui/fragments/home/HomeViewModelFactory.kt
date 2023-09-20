@@ -9,16 +9,16 @@ import com.filipemorgado.myexpenses.domain.usecase.UpdateTransactionUseCase
 
 @Suppress("UNCHECKED_CAST")
 class HomeViewModelFactory(
-    private val addTransactionUseCase: AddTransactionUseCase,
+    /*private val addTransactionUseCase: AddTransactionUseCase,
     private val deleteTransactionUseCase: DeleteTransactionUseCase,
-    private val updateTransactionUseCase: UpdateTransactionUseCase,
+    private val updateTransactionUseCase: UpdateTransactionUseCase,*/
 ) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return HomeViewModel(
-            addTransactionUseCase,
+           /* addTransactionUseCase,
             deleteTransactionUseCase,
-            updateTransactionUseCase
+            updateTransactionUseCase*/
         ) as T
     }
 }

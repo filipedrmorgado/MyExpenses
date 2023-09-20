@@ -12,9 +12,9 @@ import com.filipemorgado.myexpenses.model.Transaction
 import com.filipemorgado.myexpenses.utilities.TAG_HOME_VIEW_MODEL
 
 class HomeViewModel(
-    private val addTransactionUseCase: AddTransactionUseCase,
+   /* private val addTransactionUseCase: AddTransactionUseCase,
     private val deleteTransactionUseCase: DeleteTransactionUseCase,
-    private val updateTransactionUseCase: UpdateTransactionUseCase,
+    private val updateTransactionUseCase: UpdateTransactionUseCase,*/
 ) : ViewModel() {
 
     // Keeps the current date range up-to-date
@@ -32,7 +32,7 @@ class HomeViewModel(
 
 
     suspend fun addTransaction(transaction: Transaction) {
-        addTransactionUseCase(transaction)
+        //addTransactionUseCase(transaction)
     }
 
 }
